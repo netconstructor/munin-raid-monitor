@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 # 
 # (c) 2007 Nathan Rutman nathan@clusterfs.com
+# Updated 2009 by Aaron Parecki http://aaronparecki.com
 #
 # Plugin to monitor RAID status 
 #

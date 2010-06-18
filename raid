@@ -1,7 +1,6 @@
 #!/usr/bin/perl -w
 # 
 # (c) 2007 Nathan Rutman nathan@clusterfs.com
-# Updated 2009 by Aaron Parecki http://aaronparecki.com
 #
 # Plugin to monitor RAID status 
 #
@@ -63,8 +62,14 @@ if ( $ARGV[0] and $ARGV[0] eq "config" )
 	    if ( $pct < 100 )
 	    {
 		my $output = `/sbin/mdadm -D /dev/$dev | grep Rebuild`;
-		$output =~ /([0-9]+)% complete/;
-		$rpct = $1;
+		if( $output =~ /([0-9]+)% complete/ )
+		{
+			$rpct = $1;
+		}
+		else
+		{
+			$rcpt = 0;
+		}
 	    }
 	    print "$dev.value $pct\n";
 	    print $dev, "_rebuild.value $rpct\n";

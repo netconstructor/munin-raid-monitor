@@ -1,6 +1,10 @@
 #!/usr/bin/perl -w
 # 
 # (c) 2007 Nathan Rutman nathan@clusterfs.com
+# Updated 2010 by Aaron Parecki http://aaronparecki.com
+# Bugfix by Chris Wilson http://qwirx.com
+#
+# http://exchange.munin-monitoring.org/plugins/raid/details
 #
 # Plugin to monitor RAID status 
 #
